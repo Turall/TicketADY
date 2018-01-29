@@ -38,8 +38,12 @@ namespace WindowsFormsApp23
         private void UserControl1_Load(object sender, EventArgs e)
         {
             textBox1.ForeColor = Color.Silver;
+            panel2.Visible = false;
             monthCalendar1.Visible = false;
+            radioButton1.Checked = true;
             ComBoxAdd();
+            monthCalendar1.MinDate = DateTime.Now;
+            monthCalendar2.MinDate = DateTime.Now;
         }
 
         private void textBox1_Click(object sender, EventArgs e)
@@ -59,5 +63,12 @@ namespace WindowsFormsApp23
             }
         }
 
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                panel2.Visible = false;
+            }
+        }
     }
 }
