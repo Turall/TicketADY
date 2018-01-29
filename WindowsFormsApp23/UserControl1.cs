@@ -16,7 +16,9 @@ namespace WindowsFormsApp23
         {
             InitializeComponent();
         }
-
+        string[] bolgeler = {"Astara", "Baki", "Balaken", "Berde", "Celilabad", "Goran", "Agstafa" };
+        public static List<TicketInfo> TicketsList;
+        TicketInfo ticketInfo;
         private static UserControl1 instance;
         public static UserControl1 Instance
         {
@@ -54,8 +56,7 @@ namespace WindowsFormsApp23
         }
         private void ComBoxAdd()
         {
-            string[] bolgeler = { "Agstafa", "Astara", "Baki", "Balaken", "Berde", "Celilabad",
-                "Goran", "Gence","Lenkeran","Semkir","Kurdemir", "Masalli", "Qax", "Qazax","Yalama", "Yevlax" };
+            
             for (int i = 0; i < bolgeler.Length; i++)
             {
                 comboBox1.Items.Add(bolgeler[i]);
@@ -79,21 +80,97 @@ namespace WindowsFormsApp23
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text)  
+                || !checkBox1.Checked || textBox1.Text !=monthCalendar1.SelectionStart.ToString() &&
+                textBox2.Text != monthCalendar2.SelectionStart.ToString())
+            {
+                if (string.IsNullOrWhiteSpace(comboBox1.Text))
+                    comboBox1.BackColor = Color.Red;
+                   else comboBox1.BackColor = Color.White;
+                if (string.IsNullOrWhiteSpace(comboBox2.Text))
+                    comboBox2.BackColor = Color.Red;
+                else comboBox2.BackColor = Color.White;
+                if (textBox1.Text != monthCalendar1.SelectionStart.ToString())
+                    textBox1.BackColor = Color.Red;
+                else textBox1.BackColor = Color.White;
+                if (textBox2.Text != monthCalendar1.SelectionStart.ToString())
+                    textBox2.BackColor = Color.Red;
+                else textBox2.BackColor = Color.White;
+                if (!checkBox1.Checked)
+                    checkBox1.ForeColor = Color.Red;
+                else checkBox1.ForeColor = SystemColors.HotTrack;
+                return;
+            }
+            else
+            {
+
+                TicketsList = new List<TicketInfo>();
+                ticketInfo = new TicketInfo();
+                BosVaqonlar();
+                ticketInfo.Hardan = comboBox1.Text;
+                ticketInfo.Haraya = comboBox2.Text;
+                ticketInfo.GedisTarixi = textBox1.Text;
+                if (panel2.Visible)
+                { ticketInfo.GelisTarixi = textBox2.Text; }
+                ticketInfo.Boyukler = comboBox3.Text;
+                ticketInfo.Balacalar = comboBox4.Text;
+                ticketInfo.Korpeler = comboBox5.Text;
+                TicketsList.Add(ticketInfo);
             Controls.Add(UserControl2.Instance);
             UserControl2.Instance.BringToFront();
             UserControl2.Instance.Dock = DockStyle.Fill;
+                instance = null;
+            }
+        }
+        public  int BosVaqonlar()
+        {
+            
+            for (int i = 0; i < bolgeler.Length ; i++)
+            {
+                if(comboBox1.Text == bolgeler[i])
+                {
+                    if (i == 0) { ticketInfo.Vaqonlar = i + 1; }
+                    ticketInfo.Vaqonlar = i;
+                    return ticketInfo.Vaqonlar;
+                }
+            }
+            return -1;
+        } 
+       
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            textBox1.Text = monthCalendar1.SelectionStart.Date.ToString();
+        }
+
+        private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            textBox2.Text = monthCalendar2.SelectionStart.Date.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string cmbx1 = comboBox1.Text ;
+            string cmbx2 = comboBox2.Text;
+            comboBox1.Text = cmbx2;
+            comboBox2.Text = cmbx1;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            panel2.Visible = true;
         }
     }
-    class TicketInfo
+    public class TicketInfo
     {
         public string Hardan { get; set; }
         public string Haraya { get; set; }
-        public string BirIstiqamet { get; set; }
-        public string IkiIstiqamet { get; set; }
         public string GedisTarixi { get; set; }
         public string GelisTarixi { get; set; }
         public string Boyukler { get; set; }
         public string Balacalar { get; set; }
-        public string Korpeler { get; set; } 
+        public string Korpeler { get; set; }
+        public int Vaqonlar { get; set; }
+        
     }
+   
 }

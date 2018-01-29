@@ -87,6 +87,7 @@
             this.button1.Size = new System.Drawing.Size(59, 38);
             this.button1.TabIndex = 2;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // radioButton1
             // 
@@ -112,12 +113,16 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "GEDIS-QAYIDIS";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // monthCalendar1
             // 
             this.monthCalendar1.Location = new System.Drawing.Point(0, 43);
+            this.monthCalendar1.MaxDate = new System.DateTime(2019, 1, 30, 0, 0, 0, 0);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 5;
+            this.monthCalendar1.TitleForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // textBox1
             // 
@@ -171,6 +176,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 0;
+            this.comboBox3.Text = "0";
             // 
             // comboBox4
             // 
@@ -180,6 +186,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
             this.comboBox4.TabIndex = 0;
+            this.comboBox4.Text = "0";
             // 
             // comboBox5
             // 
@@ -189,6 +196,7 @@
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(121, 21);
             this.comboBox5.TabIndex = 0;
+            this.comboBox5.Text = "0";
             // 
             // label4
             // 
@@ -253,6 +261,7 @@
             this.monthCalendar2.Location = new System.Drawing.Point(0, 43);
             this.monthCalendar2.Name = "monthCalendar2";
             this.monthCalendar2.TabIndex = 5;
+            this.monthCalendar2.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar2_DateChanged);
             // 
             // textBox2
             // 
