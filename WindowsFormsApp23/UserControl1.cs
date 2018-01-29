@@ -61,6 +61,12 @@ namespace WindowsFormsApp23
                 comboBox1.Items.Add(bolgeler[i]);
                 comboBox2.Items.Add(bolgeler[i]);
             }
+            for (int i = 1; i < 5; i++)
+            {
+                comboBox3.Items.Add(i.ToString());
+                comboBox4.Items.Add(i.ToString());
+                comboBox5.Items.Add(i.ToString());
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -70,5 +76,24 @@ namespace WindowsFormsApp23
                 panel2.Visible = false;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Controls.Add(UserControl2.Instance);
+            UserControl2.Instance.BringToFront();
+            UserControl2.Instance.Dock = DockStyle.Fill;
+        }
+    }
+    class TicketInfo
+    {
+        public string Hardan { get; set; }
+        public string Haraya { get; set; }
+        public string BirIstiqamet { get; set; }
+        public string IkiIstiqamet { get; set; }
+        public string GedisTarixi { get; set; }
+        public string GelisTarixi { get; set; }
+        public string Boyukler { get; set; }
+        public string Balacalar { get; set; }
+        public string Korpeler { get; set; } 
     }
 }

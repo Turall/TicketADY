@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl1));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -239,12 +240,13 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(331, 454);
+            this.button2.Location = new System.Drawing.Point(367, 454);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 29);
             this.button2.TabIndex = 9;
             this.button2.Text = "BILET AXTAR";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // monthCalendar2
             // 
@@ -312,6 +314,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightGray;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -330,8 +334,9 @@
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox1);
+            this.DoubleBuffered = true;
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(492, 498);
+            this.Size = new System.Drawing.Size(546, 498);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
