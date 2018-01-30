@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,7 +49,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
@@ -60,7 +58,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -71,7 +68,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -83,10 +79,10 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
-            this.monthCalendar3 = new System.Windows.Forms.MonthCalendar();
-            this.monthCalendar4 = new System.Windows.Forms.MonthCalendar();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -96,7 +92,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.monthCalendar1);
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.checkBox2);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.comboBox1);
@@ -104,7 +100,6 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 3);
@@ -121,6 +116,7 @@
             this.checkBox2.TabIndex = 3;
             this.checkBox2.Text = "Qadin";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox1
             // 
@@ -131,6 +127,7 @@
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Kisi";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // comboBox1
             // 
@@ -155,7 +152,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 169);
+            this.label3.Location = new System.Drawing.Point(52, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 0;
@@ -181,18 +178,6 @@
             this.textBox2.Text = "Soyad";
             this.textBox2.Click += new System.EventHandler(this.texbox_click);
             // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox4.ForeColor = System.Drawing.Color.Silver;
-            this.textBox4.Location = new System.Drawing.Point(57, 185);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(64, 20);
-            this.textBox4.TabIndex = 1;
-            this.textBox4.Text = "Gun/Ay/IL";
-            this.textBox4.Click += new System.EventHandler(this.textBox4_Click);
-            // 
             // textBox1
             // 
             this.textBox1.ForeColor = System.Drawing.Color.Silver;
@@ -213,7 +198,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.monthCalendar2);
+            this.panel2.Controls.Add(this.dateTimePicker2);
             this.panel2.Controls.Add(this.checkBox4);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.checkBox3);
@@ -223,7 +208,6 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox8);
             this.panel2.Location = new System.Drawing.Point(310, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(310, 240);
@@ -291,7 +275,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(62, 172);
+            this.label5.Location = new System.Drawing.Point(63, 192);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 13);
             this.label5.TabIndex = 0;
@@ -317,18 +301,6 @@
             this.textBox7.Text = "Senedin Seriya ve Nomresi";
             this.textBox7.Click += new System.EventHandler(this.texbox_click);
             // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox8.ForeColor = System.Drawing.Color.Silver;
-            this.textBox8.Location = new System.Drawing.Point(65, 188);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(64, 20);
-            this.textBox8.TabIndex = 1;
-            this.textBox8.Text = "Gun/Ay/IL";
-            this.textBox8.Click += new System.EventHandler(this.textBox8_Click);
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -339,7 +311,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.monthCalendar3);
+            this.panel4.Controls.Add(this.dateTimePicker3);
             this.panel4.Controls.Add(this.checkBox5);
             this.panel4.Controls.Add(this.checkBox6);
             this.panel4.Controls.Add(this.comboBox3);
@@ -347,7 +319,6 @@
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.textBox9);
             this.panel4.Controls.Add(this.textBox10);
-            this.panel4.Controls.Add(this.textBox11);
             this.panel4.Controls.Add(this.textBox12);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Location = new System.Drawing.Point(0, 249);
@@ -384,6 +355,7 @@
             this.comboBox3.Size = new System.Drawing.Size(145, 21);
             this.comboBox3.TabIndex = 2;
             this.comboBox3.Text = "Vetendasliq";
+            this.comboBox3.Click += new System.EventHandler(this.combox_click);
             // 
             // label7
             // 
@@ -397,7 +369,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(54, 169);
+            this.label8.Location = new System.Drawing.Point(52, 189);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 13);
             this.label8.TabIndex = 0;
@@ -411,6 +383,7 @@
             this.textBox9.Size = new System.Drawing.Size(145, 20);
             this.textBox9.TabIndex = 1;
             this.textBox9.Text = "Senedin Seriya ve Nomresi";
+            this.textBox9.Click += new System.EventHandler(this.texbox_click);
             // 
             // textBox10
             // 
@@ -420,18 +393,7 @@
             this.textBox10.Size = new System.Drawing.Size(145, 20);
             this.textBox10.TabIndex = 1;
             this.textBox10.Text = "Soyad";
-            // 
-            // textBox11
-            // 
-            this.textBox11.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox11.ForeColor = System.Drawing.Color.Silver;
-            this.textBox11.Location = new System.Drawing.Point(57, 185);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(64, 20);
-            this.textBox11.TabIndex = 1;
-            this.textBox11.Text = "Gun/Ay/IL";
-            this.textBox11.Click += new System.EventHandler(this.textBox11_Click);
+            this.textBox10.Click += new System.EventHandler(this.texbox_click);
             // 
             // textBox12
             // 
@@ -441,6 +403,7 @@
             this.textBox12.Size = new System.Drawing.Size(145, 20);
             this.textBox12.TabIndex = 1;
             this.textBox12.Text = "AD";
+            this.textBox12.Click += new System.EventHandler(this.texbox_click);
             // 
             // label9
             // 
@@ -453,7 +416,7 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.monthCalendar4);
+            this.panel5.Controls.Add(this.dateTimePicker4);
             this.panel5.Controls.Add(this.checkBox7);
             this.panel5.Controls.Add(this.checkBox8);
             this.panel5.Controls.Add(this.comboBox4);
@@ -461,7 +424,6 @@
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.textBox13);
             this.panel5.Controls.Add(this.textBox14);
-            this.panel5.Controls.Add(this.textBox15);
             this.panel5.Controls.Add(this.textBox16);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Location = new System.Drawing.Point(319, 249);
@@ -498,6 +460,7 @@
             this.comboBox4.Size = new System.Drawing.Size(145, 21);
             this.comboBox4.TabIndex = 2;
             this.comboBox4.Text = "Vetendasliq";
+            this.comboBox4.Click += new System.EventHandler(this.combox_click);
             // 
             // label10
             // 
@@ -511,7 +474,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(54, 169);
+            this.label11.Location = new System.Drawing.Point(50, 189);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 13);
             this.label11.TabIndex = 0;
@@ -525,6 +488,7 @@
             this.textBox13.Size = new System.Drawing.Size(145, 20);
             this.textBox13.TabIndex = 1;
             this.textBox13.Text = "Senedin Seriya ve Nomresi";
+            this.textBox13.Click += new System.EventHandler(this.texbox_click);
             // 
             // textBox14
             // 
@@ -534,18 +498,7 @@
             this.textBox14.Size = new System.Drawing.Size(145, 20);
             this.textBox14.TabIndex = 1;
             this.textBox14.Text = "Soyad";
-            // 
-            // textBox15
-            // 
-            this.textBox15.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox15.ForeColor = System.Drawing.Color.Silver;
-            this.textBox15.Location = new System.Drawing.Point(57, 185);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(64, 20);
-            this.textBox15.TabIndex = 1;
-            this.textBox15.Text = "Gun/Ay/IL";
-            this.textBox15.Click += new System.EventHandler(this.textBox15_Click);
+            this.textBox14.Click += new System.EventHandler(this.texbox_click);
             // 
             // textBox16
             // 
@@ -555,6 +508,7 @@
             this.textBox16.Size = new System.Drawing.Size(145, 20);
             this.textBox16.TabIndex = 1;
             this.textBox16.Text = "AD";
+            this.textBox16.Click += new System.EventHandler(this.texbox_click);
             // 
             // label12
             // 
@@ -674,29 +628,33 @@
             this.button3.Text = "Ilkin Sorgu";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // monthCalendar1
+            // dateTimePicker1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(38, 212);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 4;
+            this.dateTimePicker1.Location = new System.Drawing.Point(3, 204);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 4;
             // 
-            // monthCalendar2
+            // dateTimePicker2
             // 
-            this.monthCalendar2.Location = new System.Drawing.Point(33, 212);
-            this.monthCalendar2.Name = "monthCalendar2";
-            this.monthCalendar2.TabIndex = 4;
+            this.dateTimePicker2.Location = new System.Drawing.Point(38, 211);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 4;
             // 
-            // monthCalendar3
+            // dateTimePicker3
             // 
-            this.monthCalendar3.Location = new System.Drawing.Point(18, 214);
-            this.monthCalendar3.Name = "monthCalendar3";
-            this.monthCalendar3.TabIndex = 4;
+            this.dateTimePicker3.Location = new System.Drawing.Point(23, 208);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker3.TabIndex = 4;
             // 
-            // monthCalendar4
+            // dateTimePicker4
             // 
-            this.monthCalendar4.Location = new System.Drawing.Point(29, 214);
-            this.monthCalendar4.Name = "monthCalendar4";
-            this.monthCalendar4.TabIndex = 4;
+            this.dateTimePicker4.Location = new System.Drawing.Point(29, 208);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker4.TabIndex = 4;
             // 
             // UserControl3
             // 
@@ -743,7 +701,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.TextBox textBox5;
@@ -752,7 +709,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox6;
@@ -761,7 +717,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel5;
@@ -772,7 +727,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel6;
@@ -784,9 +738,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.MonthCalendar monthCalendar2;
-        private System.Windows.Forms.MonthCalendar monthCalendar3;
-        private System.Windows.Forms.MonthCalendar monthCalendar4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker4;
     }
 }

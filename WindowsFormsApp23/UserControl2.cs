@@ -43,11 +43,11 @@ namespace WindowsFormsApp23
                 boyuk.Text = item.Boyukler + " Boyuk";
                 usaqlar.Text = item.Balacalar + " Usaqlar";
                 Korpe.Text = item.Korpeler + " Korpeler";
-                Gedis.Text = item.Hardan;
+                Gedis.Text = item.Haradan;
                 Teyinat.Text = item.Haraya;
                 qatar.Text = QatarN.Text;
                 vaqontipi.Text = "KP";
-                marsrut.Text = item.Hardan + "-" + item.Haraya;
+                marsrut.Text = item.Haradan + "-" + item.Haraya;
                 label6.Text = "Gedis: " + marsrut.Text;
                 minikVaxti.Text = item.GedisTarixi;
                     bqiymet *= Convert.ToInt32(item.Boyukler);

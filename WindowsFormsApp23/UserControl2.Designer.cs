@@ -67,11 +67,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -86,6 +86,7 @@
             this.columnHeader2,
             this.columnHeader3});
             this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(201, 96);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(384, 116);
@@ -449,18 +450,41 @@
             this.panel7.Size = new System.Drawing.Size(575, 103);
             this.panel7.TabIndex = 7;
             // 
-            // button3
+            // button7
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(39, 33);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(46, 37);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Ilkin Sorgu";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(386, 33);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(57, 37);
+            this.button7.TabIndex = 0;
+            this.button7.Text = "Odenis";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(294, 33);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(57, 37);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "Yer Secimi";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(205, 33);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(61, 37);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "Sernisin Melumati";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -475,41 +499,18 @@
             this.button4.Text = "Vaqon Tipi";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // button3
             // 
-            this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(205, 33);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(61, 37);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Sernisin Melumati";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(294, 33);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(57, 37);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Yer Secimi";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(386, 33);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(57, 37);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "Odenis";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(39, 33);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(46, 37);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Ilkin Sorgu";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // UserControl2
             // 

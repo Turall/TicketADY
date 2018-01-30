@@ -19,10 +19,9 @@ namespace WindowsFormsApp23
             panel4.Visible = false;
             panel5.Visible = false;
             panel6.Visible = false;
-            monthCalendar1.Visible = false;
-            monthCalendar2.Visible = false;
-            monthCalendar3.Visible = false;
-            monthCalendar4.Visible = false;
+            dateTimePicker1.Visible = true;
+           
+            
         }
         private static UserControl3 instance;
         public static UserControl3 Instance
@@ -91,26 +90,21 @@ namespace WindowsFormsApp23
             instance = null;
         }
 
-        private void textBox4_Click(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            monthCalendar1.Visible = true;
-            monthCalendar1.BringToFront();
+            if (checkBox2.Checked)
+            {
+                checkBox2.Checked = false;
+            }
         }
 
-        private void textBox8_Click(object sender, EventArgs e)
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            monthCalendar2.Visible = true;
-            
-        }
 
-        private void textBox11_Click(object sender, EventArgs e)
-        {
-            monthCalendar3.Visible = true;
-        }
-
-        private void textBox15_Click(object sender, EventArgs e)
-        {
-            monthCalendar4.Visible = true;
+            if (checkBox1.Checked)
+            {
+                checkBox1.Checked = false;
+            }
         }
     }
 }

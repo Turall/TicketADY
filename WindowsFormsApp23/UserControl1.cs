@@ -81,8 +81,8 @@ namespace WindowsFormsApp23
         private void button2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text)  
-                || !checkBox1.Checked || textBox1.Text !=monthCalendar1.SelectionStart.ToString() &&
-                textBox2.Text != monthCalendar2.SelectionStart.ToString())
+                || !checkBox1.Checked || textBox1.Text !=monthCalendar1.SelectionStart.ToShortDateString() &&
+                textBox2.Text != monthCalendar2.SelectionStart.ToShortDateString())
             {
                 if (string.IsNullOrWhiteSpace(comboBox1.Text))
                     comboBox1.BackColor = Color.Red;
@@ -90,10 +90,10 @@ namespace WindowsFormsApp23
                 if (string.IsNullOrWhiteSpace(comboBox2.Text))
                     comboBox2.BackColor = Color.Red;
                 else comboBox2.BackColor = Color.White;
-                if (textBox1.Text != monthCalendar1.SelectionStart.ToString())
+                if (textBox1.Text != monthCalendar1.SelectionStart.ToShortDateString())
                     textBox1.BackColor = Color.Red;
-                else textBox1.BackColor = Color.White;
-                if (textBox2.Text != monthCalendar1.SelectionStart.ToString())
+                else textBox1.BackColor = Color.Silver;
+                if (textBox2.Text != monthCalendar1.SelectionStart.ToShortDateString())
                     textBox2.BackColor = Color.Red;
                 else textBox2.BackColor = Color.White;
                 if (!checkBox1.Checked)
@@ -107,7 +107,7 @@ namespace WindowsFormsApp23
                 TicketsList = new List<TicketInfo>();
                 ticketInfo = new TicketInfo();
                 BosVaqonlar();
-                ticketInfo.Hardan = comboBox1.Text;
+                ticketInfo.Haradan = comboBox1.Text;
                 ticketInfo.Haraya = comboBox2.Text;
                 ticketInfo.GedisTarixi = textBox1.Text;
                 if (panel2.Visible)
@@ -139,12 +139,13 @@ namespace WindowsFormsApp23
        
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
-            textBox1.Text = monthCalendar1.SelectionStart.Date.ToString();
+            textBox1.Text = monthCalendar1.SelectionStart.Date.ToShortDateString();
+            monthCalendar1.Visible = false;
         }
 
         private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
         {
-            textBox2.Text = monthCalendar2.SelectionStart.Date.ToString();
+            textBox2.Text = monthCalendar2.SelectionStart.Date.ToShortDateString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -162,7 +163,7 @@ namespace WindowsFormsApp23
     }
     public class TicketInfo
     {
-        public string Hardan { get; set; }
+        public string Haradan { get; set; }
         public string Haraya { get; set; }
         public string GedisTarixi { get; set; }
         public string GelisTarixi { get; set; }
