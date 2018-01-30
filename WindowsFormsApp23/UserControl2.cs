@@ -67,5 +67,13 @@ namespace WindowsFormsApp23
             UserControl1.Instance.BringToFront();
             UserControl1.Instance.Dock = DockStyle.Fill;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Controls.Add(UserControl3.Instance);
+            UserControl3.Instance.Dock = DockStyle.Fill;
+            UserControl3.Instance.BringToFront();
+            instance = null;
+        }
     }
 }
