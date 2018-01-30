@@ -62,7 +62,7 @@ namespace WindowsFormsApp23
                 comboBox1.Items.Add(bolgeler[i]);
                 comboBox2.Items.Add(bolgeler[i]);
             }
-            for (int i = 1; i < 5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 comboBox3.Items.Add(i.ToString());
                 comboBox4.Items.Add(i.ToString());
@@ -81,7 +81,7 @@ namespace WindowsFormsApp23
         private void button2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text)  
-                || !checkBox1.Checked || textBox1.Text !=monthCalendar1.SelectionStart.ToShortDateString() &&
+                || !checkBox1.Checked || comboBox3.Text == "0" || textBox1.Text !=monthCalendar1.SelectionStart.ToShortDateString() &&
                 textBox2.Text != monthCalendar2.SelectionStart.ToShortDateString())
             {
                 if (string.IsNullOrWhiteSpace(comboBox1.Text))
@@ -89,7 +89,9 @@ namespace WindowsFormsApp23
                    else comboBox1.BackColor = Color.White;
                 if (string.IsNullOrWhiteSpace(comboBox2.Text))
                     comboBox2.BackColor = Color.Red;
-                else comboBox2.BackColor = Color.White;
+                if (comboBox3.Text == "0")
+                    comboBox3.BackColor = Color.Red;
+                else comboBox3.BackColor = Color.White;
                 if (textBox1.Text != monthCalendar1.SelectionStart.ToShortDateString())
                     textBox1.BackColor = Color.Red;
                 else textBox1.BackColor = Color.Silver;
@@ -146,6 +148,7 @@ namespace WindowsFormsApp23
         private void monthCalendar2_DateChanged(object sender, DateRangeEventArgs e)
         {
             textBox2.Text = monthCalendar2.SelectionStart.Date.ToShortDateString();
+            monthCalendar2.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -160,6 +163,18 @@ namespace WindowsFormsApp23
         {
             panel2.Visible = true;
         }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            monthCalendar2.Visible = true;
+        }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        
     }
     public class TicketInfo
     {

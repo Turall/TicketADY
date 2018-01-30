@@ -66,6 +66,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             // 
             // comboBox2
             // 
@@ -76,6 +77,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 2;
+            this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             // 
             // button1
             // 
@@ -180,6 +182,7 @@
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 3;
             this.comboBox3.Text = "0";
+            this.comboBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             // 
             // comboBox4
             // 
@@ -190,6 +193,7 @@
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
             this.comboBox4.TabIndex = 4;
             this.comboBox4.Text = "0";
+            this.comboBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             // 
             // comboBox5
             // 
@@ -200,6 +204,7 @@
             this.comboBox5.Size = new System.Drawing.Size(121, 21);
             this.comboBox5.TabIndex = 5;
             this.comboBox5.Text = "0";
+            this.comboBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
             // 
             // label4
             // 
@@ -276,7 +281,7 @@
             this.textBox2.Size = new System.Drawing.Size(163, 20);
             this.textBox2.TabIndex = 6;
             this.textBox2.Text = "GUN/AY/IL";
-            this.textBox2.Click += new System.EventHandler(this.textBox1_Click);
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             // 
             // label8
             // 

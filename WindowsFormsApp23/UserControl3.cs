@@ -20,9 +20,9 @@ namespace WindowsFormsApp23
             panel5.Visible = false;
             panel6.Visible = false;
             dateTimePicker1.Visible = true;
-           
-            
         }
+        Person person;
+        public static List<Person> PersonList;
         private static UserControl3 instance;
         public static UserControl3 Instance
         {
@@ -56,6 +56,12 @@ namespace WindowsFormsApp23
             comboBox2.Items.Add("Azerbaycan");
             comboBox2.Items.Add("Russiya");
             comboBox2.Items.Add("Turkiye");
+            comboBox3.Items.Add("Azerbaycan");
+            comboBox3.Items.Add("Russiya");
+            comboBox3.Items.Add("Turkiye");
+            comboBox4.Items.Add("Azerbaycan");
+            comboBox4.Items.Add("Russiya");
+            comboBox4.Items.Add("Turkiye");
             foreach (var item in UserControl1.TicketsList)
             {
                 label1.Text = "BÖYÜK (SƏRNİŞİN 1 )";
@@ -106,5 +112,95 @@ namespace WindowsFormsApp23
                 checkBox1.Checked = false;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            person = new Person();
+            PersonList = new List<Person>();
+            person.Name = textBox1.Text;
+            person.Surname = textBox2.Text;
+            PersonList.Add(person);
+            if(panel2.Visible)
+            {
+                person.Name = textBox5.Text;
+                person.Surname = textBox6.Text;
+                PersonList.Add(person);
+            }
+            if (panel4.Visible)
+            {
+                person.Name = textBox12.Text;
+                person.Surname = textBox10.Text;
+                PersonList.Add(person);
+            }
+            if (panel5.Visible)
+            {
+                person.Name = textBox16.Text;
+                person.Surname = textBox14.Text;
+                PersonList.Add(person);
+            }
+            Controls.Add(UserControl4.Instance);
+            UserControl4.Instance.Dock = DockStyle.Fill;
+            UserControl4.Instance.BringToFront();
+            instance = null;
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked)
+            {
+                checkBox4.Checked = false;
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked)
+            {
+                checkBox3.Checked = false;
+            }
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox6.Checked)
+            {
+                checkBox5.Checked = false;
+            }
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked)
+            {
+                checkBox6.Checked = false;
+            }
+        }
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (checkBox8.Checked)
+            {
+                checkBox7.Checked = false;
+            }
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox7.Checked)
+            {
+                checkBox8.Checked = false;
+            }
+        }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+    }
+    public class Person
+    {
+        public string Name { get; set; }
+        public string Surname { get; set; }
     }
 }
