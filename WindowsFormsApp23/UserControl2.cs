@@ -53,7 +53,7 @@ namespace WindowsFormsApp23
                     bqiymet *= Convert.ToInt32(item.Boyukler);
                     blcqiymet *= Convert.ToInt32(item.Balacalar);
                 sum = bqiymet + blcqiymet;
-                    ListViewItem listitem = new ListViewItem(new string[] { rand.Next(1,15).ToString(),sum.ToString(),item.Vaqonlar.ToString() });
+                    ListViewItem listitem = new ListViewItem(new string[] { "26".ToString(),sum.ToString(),item.Vaqonlar.ToString() });
                 listView1.Items.Add(listitem);
             }
         }

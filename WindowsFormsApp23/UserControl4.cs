@@ -53,23 +53,34 @@ namespace WindowsFormsApp23
                     return;
                 else
                 {
-                    if(balaca != 0)
-                        balaca--;
+                    
                     if(boyuk != 0)
+                    {
                         boyuk--;
-                    btn.BackColor = Color.Red;
+                        btn.BackColor = Color.Red;
+                    }
+                    else if(balaca != 0)
+                    {
+                        balaca--;
+                        btn.BackColor = Color.Red;
+                    }
+                       
+                   
                 }
             }
             else if(btn.BackColor == Color.Red )
             {
                 if(boyuk >= 0)
+                {
                     boyuk++;
-                
-                if (balaca >= 0)
+                    btn.BackColor = Color.ForestGreen;
+                    return;
+                }
+                else if(balaca >= 0)
+                {
                     balaca++;
-                btn.BackColor = Color.ForestGreen;
-
-
+                    btn.BackColor = Color.ForestGreen;
+                }
             }
             
         }
@@ -92,6 +103,14 @@ namespace WindowsFormsApp23
                 item.BackColor = Color.ForestGreen;
 
             }
+        }
+
+        private void button36_Click(object sender, EventArgs e)
+        {
+            Controls.Add(UserControl3.Instance);
+            UserControl3.Instance.Dock = DockStyle.Fill;
+            UserControl3.Instance.BringToFront();
+            instance = null;
         }
     }
 }

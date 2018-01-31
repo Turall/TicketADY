@@ -30,14 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl4));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -58,18 +70,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.button31 = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
@@ -131,6 +131,82 @@
             this.panel1.Size = new System.Drawing.Size(666, 145);
             this.panel1.TabIndex = 0;
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel10.Location = new System.Drawing.Point(613, 99);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(10, 43);
+            this.panel10.TabIndex = 7;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel11.Location = new System.Drawing.Point(613, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(10, 52);
+            this.panel11.TabIndex = 6;
+            // 
+            // button30
+            // 
+            this.button30.BackColor = System.Drawing.Color.ForestGreen;
+            this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button30.Location = new System.Drawing.Point(109, 116);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(32, 26);
+            this.button30.TabIndex = 5;
+            this.button30.Text = "26";
+            this.button30.UseVisualStyleBackColor = false;
+            this.button30.Click += new System.EventHandler(this.btn_click);
+            // 
+            // button28
+            // 
+            this.button28.BackColor = System.Drawing.Color.ForestGreen;
+            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button28.Location = new System.Drawing.Point(189, 117);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(32, 26);
+            this.button28.TabIndex = 5;
+            this.button28.Text = "24";
+            this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.btn_click);
+            // 
+            // button26
+            // 
+            this.button26.BackColor = System.Drawing.Color.ForestGreen;
+            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button26.Location = new System.Drawing.Point(282, 118);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(32, 26);
+            this.button26.TabIndex = 5;
+            this.button26.Text = "22";
+            this.button26.UseVisualStyleBackColor = false;
+            this.button26.Click += new System.EventHandler(this.btn_click);
+            // 
+            // button24
+            // 
+            this.button24.BackColor = System.Drawing.Color.ForestGreen;
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button24.Location = new System.Drawing.Point(377, 118);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(32, 26);
+            this.button24.TabIndex = 5;
+            this.button24.Text = "20";
+            this.button24.UseVisualStyleBackColor = false;
+            this.button24.Click += new System.EventHandler(this.btn_click);
+            // 
+            // button22
+            // 
+            this.button22.BackColor = System.Drawing.Color.ForestGreen;
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button22.Location = new System.Drawing.Point(469, 118);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(32, 26);
+            this.button22.TabIndex = 5;
+            this.button22.Text = "18";
+            this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.btn_click);
+            // 
             // button20
             // 
             this.button20.BackColor = System.Drawing.Color.ForestGreen;
@@ -179,6 +255,18 @@
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.btn_click);
             // 
+            // button29
+            // 
+            this.button29.BackColor = System.Drawing.Color.ForestGreen;
+            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button29.Location = new System.Drawing.Point(145, 116);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(34, 26);
+            this.button29.TabIndex = 4;
+            this.button29.Text = "25";
+            this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.btn_click);
+            // 
             // button19
             // 
             this.button19.BackColor = System.Drawing.Color.ForestGreen;
@@ -190,6 +278,18 @@
             this.button19.Text = "14";
             this.button19.UseVisualStyleBackColor = false;
             this.button19.Click += new System.EventHandler(this.btn_click);
+            // 
+            // button27
+            // 
+            this.button27.BackColor = System.Drawing.Color.ForestGreen;
+            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button27.Location = new System.Drawing.Point(225, 118);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(34, 26);
+            this.button27.TabIndex = 4;
+            this.button27.Text = "23";
+            this.button27.UseVisualStyleBackColor = false;
+            this.button27.Click += new System.EventHandler(this.btn_click);
             // 
             // button15
             // 
@@ -203,6 +303,18 @@
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.btn_click);
             // 
+            // button25
+            // 
+            this.button25.BackColor = System.Drawing.Color.ForestGreen;
+            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button25.Location = new System.Drawing.Point(318, 118);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(34, 26);
+            this.button25.TabIndex = 4;
+            this.button25.Text = "21";
+            this.button25.UseVisualStyleBackColor = false;
+            this.button25.Click += new System.EventHandler(this.btn_click);
+            // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.ForestGreen;
@@ -215,6 +327,18 @@
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.btn_click);
             // 
+            // button23
+            // 
+            this.button23.BackColor = System.Drawing.Color.ForestGreen;
+            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button23.Location = new System.Drawing.Point(413, 118);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(34, 26);
+            this.button23.TabIndex = 4;
+            this.button23.Text = "19";
+            this.button23.UseVisualStyleBackColor = false;
+            this.button23.Click += new System.EventHandler(this.btn_click);
+            // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.ForestGreen;
@@ -226,6 +350,18 @@
             this.button7.Text = "6";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.btn_click);
+            // 
+            // button21
+            // 
+            this.button21.BackColor = System.Drawing.Color.ForestGreen;
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button21.Location = new System.Drawing.Point(505, 118);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(34, 26);
+            this.button21.TabIndex = 4;
+            this.button21.Text = "17";
+            this.button21.UseVisualStyleBackColor = false;
+            this.button21.Click += new System.EventHandler(this.btn_click);
             // 
             // button18
             // 
@@ -435,142 +571,6 @@
             this.panel2.Size = new System.Drawing.Size(10, 52);
             this.panel2.TabIndex = 0;
             // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel10.Location = new System.Drawing.Point(613, 99);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(10, 43);
-            this.panel10.TabIndex = 7;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel11.Location = new System.Drawing.Point(613, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(10, 52);
-            this.panel11.TabIndex = 6;
-            // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.ForestGreen;
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button21.Location = new System.Drawing.Point(505, 118);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(34, 26);
-            this.button21.TabIndex = 4;
-            this.button21.Text = "17";
-            this.button21.UseVisualStyleBackColor = false;
-            this.button21.Click += new System.EventHandler(this.btn_click);
-            // 
-            // button22
-            // 
-            this.button22.BackColor = System.Drawing.Color.ForestGreen;
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button22.Location = new System.Drawing.Point(469, 118);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(32, 26);
-            this.button22.TabIndex = 5;
-            this.button22.Text = "18";
-            this.button22.UseVisualStyleBackColor = false;
-            this.button22.Click += new System.EventHandler(this.btn_click);
-            // 
-            // button23
-            // 
-            this.button23.BackColor = System.Drawing.Color.ForestGreen;
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button23.Location = new System.Drawing.Point(413, 118);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(34, 26);
-            this.button23.TabIndex = 4;
-            this.button23.Text = "19";
-            this.button23.UseVisualStyleBackColor = false;
-            this.button23.Click += new System.EventHandler(this.btn_click);
-            // 
-            // button24
-            // 
-            this.button24.BackColor = System.Drawing.Color.ForestGreen;
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button24.Location = new System.Drawing.Point(377, 118);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(32, 26);
-            this.button24.TabIndex = 5;
-            this.button24.Text = "20";
-            this.button24.UseVisualStyleBackColor = false;
-            this.button24.Click += new System.EventHandler(this.btn_click);
-            // 
-            // button25
-            // 
-            this.button25.BackColor = System.Drawing.Color.ForestGreen;
-            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button25.Location = new System.Drawing.Point(318, 118);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(34, 26);
-            this.button25.TabIndex = 4;
-            this.button25.Text = "21";
-            this.button25.UseVisualStyleBackColor = false;
-            this.button25.Click += new System.EventHandler(this.btn_click);
-            // 
-            // button26
-            // 
-            this.button26.BackColor = System.Drawing.Color.ForestGreen;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button26.Location = new System.Drawing.Point(282, 118);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(32, 26);
-            this.button26.TabIndex = 5;
-            this.button26.Text = "22";
-            this.button26.UseVisualStyleBackColor = false;
-            this.button26.Click += new System.EventHandler(this.btn_click);
-            // 
-            // button27
-            // 
-            this.button27.BackColor = System.Drawing.Color.ForestGreen;
-            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button27.Location = new System.Drawing.Point(225, 118);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(34, 26);
-            this.button27.TabIndex = 4;
-            this.button27.Text = "23";
-            this.button27.UseVisualStyleBackColor = false;
-            this.button27.Click += new System.EventHandler(this.btn_click);
-            // 
-            // button28
-            // 
-            this.button28.BackColor = System.Drawing.Color.ForestGreen;
-            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button28.Location = new System.Drawing.Point(189, 117);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(32, 26);
-            this.button28.TabIndex = 5;
-            this.button28.Text = "24";
-            this.button28.UseVisualStyleBackColor = false;
-            this.button28.Click += new System.EventHandler(this.btn_click);
-            // 
-            // button29
-            // 
-            this.button29.BackColor = System.Drawing.Color.ForestGreen;
-            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button29.Location = new System.Drawing.Point(145, 116);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(34, 26);
-            this.button29.TabIndex = 4;
-            this.button29.Text = "25";
-            this.button29.UseVisualStyleBackColor = false;
-            this.button29.Click += new System.EventHandler(this.btn_click);
-            // 
-            // button30
-            // 
-            this.button30.BackColor = System.Drawing.Color.ForestGreen;
-            this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button30.Location = new System.Drawing.Point(109, 116);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(32, 26);
-            this.button30.TabIndex = 5;
-            this.button30.Text = "26";
-            this.button30.UseVisualStyleBackColor = false;
-            this.button30.Click += new System.EventHandler(this.btn_click);
-            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.Silver;
@@ -660,6 +660,7 @@
             this.button36.Size = new System.Drawing.Size(66, 33);
             this.button36.TabIndex = 10;
             this.button36.UseVisualStyleBackColor = false;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
             // 
             // button37
             // 

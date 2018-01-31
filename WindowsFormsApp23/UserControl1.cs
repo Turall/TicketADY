@@ -16,7 +16,7 @@ namespace WindowsFormsApp23
         {
             InitializeComponent();
         }
-        string[] bolgeler = {"Astara", "Baki", "Balaken", "Berde", "Celilabad", "Goran", "Agstafa" };
+        string[] bolgeler = { "Astara", "Baki", "Balaken", "Berde", "Celilabad", "Goran", "Agstafa" };
         public static List<TicketInfo> TicketsList;
         TicketInfo ticketInfo;
         private static UserControl1 instance;
@@ -24,7 +24,7 @@ namespace WindowsFormsApp23
         {
             get
             {
-                if(instance == null)
+                if (instance == null)
                 {
                     instance = new UserControl1();
                     return instance;
@@ -35,7 +35,7 @@ namespace WindowsFormsApp23
                 }
             }
         }
-        
+
 
         private void UserControl1_Load(object sender, EventArgs e)
         {
@@ -56,7 +56,7 @@ namespace WindowsFormsApp23
         }
         private void ComBoxAdd()
         {
-            
+
             for (int i = 0; i < bolgeler.Length; i++)
             {
                 comboBox1.Items.Add(bolgeler[i]);
@@ -80,13 +80,13 @@ namespace WindowsFormsApp23
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text)  
-                || !checkBox1.Checked || comboBox3.Text == "0" || textBox1.Text !=monthCalendar1.SelectionStart.ToShortDateString() &&
+            if (string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text)
+                || !checkBox1.Checked || comboBox3.Text == "0" || textBox1.Text != monthCalendar1.SelectionStart.ToShortDateString() &&
                 textBox2.Text != monthCalendar2.SelectionStart.ToShortDateString())
             {
                 if (string.IsNullOrWhiteSpace(comboBox1.Text))
                     comboBox1.BackColor = Color.Red;
-                   else comboBox1.BackColor = Color.White;
+                else comboBox1.BackColor = Color.White;
                 if (string.IsNullOrWhiteSpace(comboBox2.Text))
                     comboBox2.BackColor = Color.Red;
                 if (comboBox3.Text == "0")
@@ -101,6 +101,11 @@ namespace WindowsFormsApp23
                 if (!checkBox1.Checked)
                     checkBox1.ForeColor = Color.Red;
                 else checkBox1.ForeColor = SystemColors.HotTrack;
+                return;
+            }
+            else if (Convert.ToInt32(comboBox5.Text) > Convert.ToInt32(comboBox3.Text))
+            {
+                MessageBox.Show("Korpelerin sayi Boyuklerin sayindan cox ola bilmez!! ");
                 return;
             }
             else
@@ -118,18 +123,18 @@ namespace WindowsFormsApp23
                 ticketInfo.Balacalar = comboBox4.Text;
                 ticketInfo.Korpeler = comboBox5.Text;
                 TicketsList.Add(ticketInfo);
-            Controls.Add(UserControl2.Instance);
-            UserControl2.Instance.BringToFront();
-            UserControl2.Instance.Dock = DockStyle.Fill;
+                Controls.Add(UserControl2.Instance);
+                UserControl2.Instance.BringToFront();
+                UserControl2.Instance.Dock = DockStyle.Fill;
                 instance = null;
             }
         }
-        public  int BosVaqonlar()
+        public int BosVaqonlar()
         {
-            
-            for (int i = 0; i < bolgeler.Length ; i++)
+
+            for (int i = 0; i < bolgeler.Length; i++)
             {
-                if(comboBox1.Text == bolgeler[i])
+                if (comboBox1.Text == bolgeler[i])
                 {
                     if (i == 0) { ticketInfo.Vaqonlar = i + 1; }
                     ticketInfo.Vaqonlar = i;
@@ -137,8 +142,8 @@ namespace WindowsFormsApp23
                 }
             }
             return -1;
-        } 
-       
+        }
+
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
             textBox1.Text = monthCalendar1.SelectionStart.Date.ToShortDateString();
@@ -153,7 +158,7 @@ namespace WindowsFormsApp23
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string cmbx1 = comboBox1.Text ;
+            string cmbx1 = comboBox1.Text;
             string cmbx2 = comboBox2.Text;
             comboBox1.Text = cmbx2;
             comboBox2.Text = cmbx1;
@@ -174,7 +179,7 @@ namespace WindowsFormsApp23
             e.Handled = true;
         }
 
-        
+
     }
     public class TicketInfo
     {
@@ -186,7 +191,7 @@ namespace WindowsFormsApp23
         public string Balacalar { get; set; }
         public string Korpeler { get; set; }
         public int Vaqonlar { get; set; }
-        
+
     }
-   
+
 }

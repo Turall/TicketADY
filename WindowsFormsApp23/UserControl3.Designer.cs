@@ -195,6 +195,7 @@
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "AD";
             this.textBox1.Click += new System.EventHandler(this.texbox_click);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label1
             // 

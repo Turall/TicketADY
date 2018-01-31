@@ -41,7 +41,9 @@ namespace WindowsFormsApp23
             TextBox txt = (TextBox)sender;
             txt.Clear();
             txt.ForeColor = Color.Black;
+            
         }
+
         private void  combox_click(object sender,EventArgs e)
         {
             ComboBox cmbx = (ComboBox)sender;
@@ -69,20 +71,20 @@ namespace WindowsFormsApp23
                 if(Convert.ToInt32(item.Boyukler) > 1 )
                 {
                     panel2.Visible = true;
-                    label2.Text = "BÖYÜK(SƏRNİŞİN 1)";
+                    label2.Text = "BÖYÜK(SƏRNİŞİN 2)";
                     label2.ForeColor = SystemColors.HotTrack;
                 } 
                 if(Convert.ToInt32(item.Balacalar) > 0)
                 {
                     panel6.Visible = true;
                     panel4.Visible = true;
-                    label9.Text = "Balaca (SƏRNİŞİN 1 )";
+                    label9.Text = "Balaca (SƏRNİŞİN 3 )";
                     label9.ForeColor = SystemColors.HotTrack;
                 }
                 if (Convert.ToInt32(item.Balacalar) == 2)
                 {
                     panel5.Visible = true;
-                    label12.Text = "Balaca (SƏRNİŞİN 1 )";
+                    label12.Text = "Balaca (SƏRNİŞİN 4 )";
                     label12.ForeColor = SystemColors.HotTrack;
                 }
             }
@@ -196,6 +198,11 @@ namespace WindowsFormsApp23
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+         
         }
     }
     public class Person
