@@ -41,6 +41,7 @@ namespace WindowsFormsApp23
                 balaca = Convert.ToUInt32(item.Balacalar);
             }
         }
+
        static uint boyuk = 0;
        static uint balaca = 0;
         private void btn_click(object sender ,EventArgs e)
