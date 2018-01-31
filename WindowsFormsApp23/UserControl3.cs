@@ -51,7 +51,6 @@ namespace WindowsFormsApp23
         }
         private void UserControl3_Load(object sender, EventArgs e)
         {
-           
             comboBox1.Items.Add("Azerbaycan");
             comboBox1.Items.Add("Russiya");
             comboBox1.Items.Add("Turkiye");
@@ -210,4 +209,6 @@ namespace WindowsFormsApp23
         public string Name { get; set; }
         public string Surname { get; set; }
     }
+
+    
 }

@@ -176,7 +176,7 @@ namespace WindowsFormsApp23
 
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = true;
+            //e.Handled = true;
         }
 
 
@@ -191,6 +191,18 @@ namespace WindowsFormsApp23
         public string Balacalar { get; set; }
         public string Korpeler { get; set; }
         public int Vaqonlar { get; set; }
+
+    }
+    class Train
+    {
+        public string TrainNumber { get; set; }
+        public string CixmaVaxti { get; set; }
+        public string CatmaVaxti { get; set; }
+
+        public static void AddtrainNumber()
+        {
+
+        }
 
     }
 
