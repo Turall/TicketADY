@@ -21,8 +21,8 @@ namespace WindowsFormsApp23
             panel6.Visible = false;
             dateTimePicker1.Visible = true;
         }
-        Person person;
-        public static List<Person> PersonList;
+        PersonInfo personInfo;
+        public static List<PersonInfo> PersonList;
         private static UserControl3 instance;
         public static UserControl3 Instance
         {
@@ -107,7 +107,6 @@ namespace WindowsFormsApp23
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-
             if (checkBox1.Checked)
             {
                 checkBox1.Checked = false;
@@ -116,28 +115,45 @@ namespace WindowsFormsApp23
 
         private void button1_Click(object sender, EventArgs e)
         {
-            person = new Person();
-            PersonList = new List<Person>();
-            person.Name = textBox1.Text;
-            person.Surname = textBox2.Text;
-            PersonList.Add(person);
+            personInfo = new PersonInfo();
+            PersonList = new List<PersonInfo>();
+            var selected = panel1.Controls.OfType<CheckBox>().Where(x => x.Checked).ToList();
+
+            foreach (var item in selected)
+            {
+                MessageBox.Show(item.Text);
+            }
+            
+            if (panel1.Visible)
+            {
+                personInfo.Name = textBox1.Text;
+                personInfo.Surname = textBox2.Text;
+                personInfo.Sened_Num = textBox2.Text;
+                foreach (var item in selected)
+                {
+                    personInfo.Vetendasliq = item.Text;
+                }
+            }
+            personInfo.Name = textBox1.Text;
+            personInfo.Surname = textBox2.Text;
+            PersonList.Add(personInfo);
             if(panel2.Visible)
             {
-                person.Name = textBox5.Text;
-                person.Surname = textBox6.Text;
-                PersonList.Add(person);
+                personInfo.Name = textBox5.Text;
+                personInfo.Surname = textBox6.Text;
+                PersonList.Add(personInfo);
             }
             if (panel4.Visible)
             {
-                person.Name = textBox12.Text;
-                person.Surname = textBox10.Text;
-                PersonList.Add(person);
+                personInfo.Name = textBox12.Text;
+                personInfo.Surname = textBox10.Text;
+                PersonList.Add(personInfo);
             }
             if (panel5.Visible)
             {
-                person.Name = textBox16.Text;
-                person.Surname = textBox14.Text;
-                PersonList.Add(person);
+                personInfo.Name = textBox16.Text;
+                personInfo.Surname = textBox14.Text;
+                PersonList.Add(personInfo);
             }
             Controls.Add(UserControl4.Instance);
             UserControl4.Instance.Dock = DockStyle.Fill;
@@ -204,11 +220,14 @@ namespace WindowsFormsApp23
          
         }
     }
-    public class Person
+    public class PersonInfo
     {
         public string Name { get; set; }
         public string Surname { get; set; }
+        public string Sened_Num { get; set; }
+        public string Vetendasliq { get; set; }
+        public string Cinsi { get; set; }
+
     }
 
-    
 }
