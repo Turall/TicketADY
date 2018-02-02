@@ -104,6 +104,12 @@ namespace WindowsFormsApp23
                 item.BackColor = Color.ForestGreen;
 
             }
+            foreach (var item in UserControl1.TicketsList)
+            {
+                boyuk =Convert.ToUInt32(item.Boyukler);
+                balaca = Convert.ToUInt32(item.Balacalar);
+
+            }
         }
 
         private void button36_Click(object sender, EventArgs e)
