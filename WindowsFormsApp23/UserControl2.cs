@@ -35,25 +35,25 @@ namespace WindowsFormsApp23
         }
         private void UserControl2_Load(object sender, EventArgs e)
         {
-            Random rand = new Random();
             
-            QatarN.Text = rand.Next(100, 600).ToString();
-            foreach (var item in UserControl1.TicketsList)
+            
+            foreach (var item in UserControl1.MainmenuInfo)
             {
-                boyuk.Text = item.Boyukler + " Boyuk";
-                usaqlar.Text = item.Balacalar + " Usaqlar";
-                Korpe.Text = item.Korpeler + " Korpeler";
-                Gedis.Text = item.Haradan;
-                Teyinat.Text = item.Haraya;
+                QatarN.Text = item.Value.TrainNumber;
+                boyuk.Text = item.Key.Boyukler + " Boyuk";
+                usaqlar.Text = item.Key.Balacalar + " Usaqlar";
+                Korpe.Text = item.Key.Korpeler + " Korpeler";
+                Gedis.Text = item.Key.Haradan;
+                Teyinat.Text = item.Key.Haraya;
                 qatar.Text = QatarN.Text;
                 vaqontipi.Text = "KP";
-                marsrut.Text = item.Haradan + "-" + item.Haraya;
+                marsrut.Text = item.Key.Haradan + "-" + item.Key.Haraya;
                 label6.Text = "Gedis: " + marsrut.Text;
-                minikVaxti.Text = item.GedisTarixi;
-                    bqiymet *= Convert.ToInt32(item.Boyukler);
-                    blcqiymet *= Convert.ToInt32(item.Balacalar);
+                minikVaxti.Text = item.Key.GedisTarixi;
+                    bqiymet *= Convert.ToInt32(item.Key.Boyukler);
+                    blcqiymet *= Convert.ToInt32(item.Key.Balacalar);
                 sum = bqiymet + blcqiymet;
-                    ListViewItem listitem = new ListViewItem(new string[] { "26".ToString(),sum.ToString(),item.Vaqonlar.ToString() });
+                    ListViewItem listitem = new ListViewItem(new string[] { item.Value.BowYerler.ToString(),sum.ToString(),item.Value.TrainNumber });
                 listView1.Items.Add(listitem);
             }
         }
@@ -62,7 +62,6 @@ namespace WindowsFormsApp23
         {
             
             Controls.Add(UserControl1.Instance);
-            UserControl1.TicketsList.Clear();
             instance = null;
             UserControl1.Instance.BringToFront();
             UserControl1.Instance.Dock = DockStyle.Fill;

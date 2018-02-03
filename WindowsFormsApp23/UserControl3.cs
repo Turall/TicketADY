@@ -62,24 +62,24 @@ namespace WindowsFormsApp23
             comboBox4.Items.Add("Azerbaycan");
             comboBox4.Items.Add("Russiya");
             comboBox4.Items.Add("Turkiye");
-            foreach (var item in UserControl1.TicketsList)
+            foreach (var item in UserControl1.MainmenuInfo)
             {
                 label1.Text = "BÖYÜK (SƏRNİŞİN 1 )";
                 label1.ForeColor = SystemColors.HotTrack;
-                if(Convert.ToInt32(item.Boyukler) > 1 )
+                if(Convert.ToInt32(item.Key.Boyukler) > 1 )
                 {
                     panel2.Visible = true;
                     label2.Text = "BÖYÜK(SƏRNİŞİN 2)";
                     label2.ForeColor = SystemColors.HotTrack;
                 } 
-                if(Convert.ToInt32(item.Balacalar) > 0)
+                if(Convert.ToInt32(item.Key.Balacalar) > 0)
                 {
                     panel6.Visible = true;
                     panel4.Visible = true;
                     label9.Text = "Balaca (SƏRNİŞİN 3 )";
                     label9.ForeColor = SystemColors.HotTrack;
                 }
-                if (Convert.ToInt32(item.Balacalar) == 2)
+                if (Convert.ToInt32(item.Key.Balacalar) == 2)
                 {
                     panel5.Visible = true;
                     label12.Text = "Balaca (SƏRNİŞİN 4 )";

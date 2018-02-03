@@ -10,15 +10,18 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp23
 {
+    public enum Bolgeler { Baki = 1,Kurdemir,Gence,Agstafa };
     public partial class UserControl1 : UserControl
     {
         public UserControl1()
         {
             InitializeComponent();
         }
-        string[] bolgeler = { "Astara", "Baki", "Balaken", "Berde", "Celilabad", "Goran", "Agstafa" };
-        public static List<TicketInfo> TicketsList;
-        TicketInfo ticketInfo;
+
+
+        public static Dictionary<TicketInfo, Train> MainmenuInfo = null;
+       // public static List<Dictionary> TicketsList = null;
+        //TicketInfo ticketInfo = null;
         private static UserControl1 instance;
         public static UserControl1 Instance
         {
@@ -57,11 +60,17 @@ namespace WindowsFormsApp23
         private void ComBoxAdd()
         {
 
-            for (int i = 0; i < bolgeler.Length; i++)
-            {
-                comboBox1.Items.Add(bolgeler[i]);
-                comboBox2.Items.Add(bolgeler[i]);
-            }
+
+            comboBox1.Items.Add(Bolgeler.Agstafa);
+            comboBox1.Items.Add(Bolgeler.Baki);
+            comboBox1.Items.Add(Bolgeler.Gence);
+            comboBox1.Items.Add(Bolgeler.Kurdemir);
+
+            comboBox2.Items.Add(Bolgeler.Agstafa);
+            comboBox2.Items.Add(Bolgeler.Baki);
+            comboBox2.Items.Add(Bolgeler.Gence);
+            comboBox2.Items.Add(Bolgeler.Kurdemir);
+
             for (int i = 0; i < 5; i++)
             {
                 comboBox3.Items.Add(i.ToString());
@@ -77,7 +86,7 @@ namespace WindowsFormsApp23
                 panel2.Visible = false;
             }
         }
-
+        public static int yer = 26;
         private void button2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(comboBox1.Text) || string.IsNullOrWhiteSpace(comboBox2.Text)
@@ -110,38 +119,31 @@ namespace WindowsFormsApp23
             }
             else
             {
-
-                TicketsList = new List<TicketInfo>();
-                ticketInfo = new TicketInfo();
-                BosVaqonlar();
-                ticketInfo.Haradan = comboBox1.Text;
-                ticketInfo.Haraya = comboBox2.Text;
-                ticketInfo.GedisTarixi = textBox1.Text;
                 if (panel2.Visible)
-                { ticketInfo.GelisTarixi = textBox2.Text; }
-                ticketInfo.Boyukler = comboBox3.Text;
-                ticketInfo.Balacalar = comboBox4.Text;
-                ticketInfo.Korpeler = comboBox5.Text;
-                TicketsList.Add(ticketInfo);
+                {
+                    MainmenuInfo = new Dictionary<TicketInfo, Train>
+                {
+                    {new TicketInfo(comboBox1.Text,comboBox2.Text,textBox1.Text,textBox2.Text,comboBox3.Text,comboBox4.Text,comboBox5.Text),
+                    new Train ("666",yer)}
+                };
+                }
+                else
+                {
+                    MainmenuInfo = new Dictionary<TicketInfo, Train>
+                {
+                    {new TicketInfo(comboBox1.Text,comboBox2.Text,textBox1.Text,comboBox3.Text,comboBox4.Text,comboBox5.Text),
+                    new Train ("666",yer)}
+                };
+                }
+               
+               //TicketsList = new List<Dictionary> ();
+               
+               // TicketsList.Add(ticketInfo);
                 Controls.Add(UserControl2.Instance);
                 UserControl2.Instance.BringToFront();
                 UserControl2.Instance.Dock = DockStyle.Fill;
                 instance = null;
             }
-        }
-        public int BosVaqonlar()
-        {
-
-            for (int i = 0; i < bolgeler.Length; i++)
-            {
-                if (comboBox1.Text == bolgeler[i])
-                {
-                    if (i == 0) { ticketInfo.Vaqonlar = i + 1; }
-                    ticketInfo.Vaqonlar = i;
-                    return ticketInfo.Vaqonlar;
-                }
-            }
-            return -1;
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
@@ -190,18 +192,36 @@ namespace WindowsFormsApp23
         public string Boyukler { get; set; }
         public string Balacalar { get; set; }
         public string Korpeler { get; set; }
-        public int Vaqonlar { get; set; }
 
+        public TicketInfo (string haradan,string haraya,string gedistarixi,string boyukler,string balacalar,string korpeler)
+        {
+            Haradan = haraya;
+            Haraya = haraya;
+            GedisTarixi = gedistarixi;
+            Boyukler = boyukler;
+            Balacalar = balacalar;
+            Korpeler = korpeler;
+        }
+        public TicketInfo(string haradan, string haraya, string gedistarixi,string gelistarixi, string boyukler, string balacalar, string korpeler)
+        {
+            Haradan = haraya;
+            Haraya = haraya;
+            GedisTarixi = gedistarixi;
+            GelisTarixi = gelistarixi;
+            Boyukler = boyukler;
+            Balacalar = balacalar;
+            Korpeler = korpeler;
+        }
     }
-    class Train
+
+    public class Train
     {
         public string TrainNumber { get; set; }
-        public string CixmaVaxti { get; set; }
-        public string CatmaVaxti { get; set; }
-
-        public static void AddtrainNumber()
+        public int BowYerler { get; set; }
+        public Train(string trainnumber,int bowyerler)
         {
-
+            TrainNumber = trainnumber;
+            BowYerler = bowyerler;
         }
 
     }
